@@ -10,13 +10,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("unused")
-public interface GuiBuilder {
-    @NotNull Component title();
-    @Nullable InventoryType type();
-    Integer slots();
-    void fill(final @NotNull Player player,
+public abstract class GuiBuilder {
+    public abstract @NotNull Component title();
+    public abstract @Nullable InventoryType type();
+    public abstract Integer slots();
+    public abstract void fill(final @NotNull Player player,
               final @NotNull Inventory inventory);
-    Boolean interact(final @NotNull Player player,
+    public abstract Boolean interact(final @NotNull Player player,
                      final @NotNull Inventory inventory,
                      final @NotNull ItemStack item,
                      final Integer slot,
