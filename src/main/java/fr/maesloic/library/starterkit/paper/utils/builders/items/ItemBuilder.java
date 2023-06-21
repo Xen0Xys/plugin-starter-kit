@@ -38,7 +38,7 @@ public class ItemBuilder implements Cloneable {
 
     // METHODS
     @Override
-    public final @NotNull ItemBuilder clone() {
+    public @NotNull ItemBuilder clone() {
         try {
             return (ItemBuilder) super.clone();
         } catch (CloneNotSupportedException e) {
