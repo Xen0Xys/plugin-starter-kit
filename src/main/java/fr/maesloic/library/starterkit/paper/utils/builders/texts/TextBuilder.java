@@ -7,6 +7,7 @@ import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("unused")
 public class TextBuilder {
     // FIELDS
     private Component component;
