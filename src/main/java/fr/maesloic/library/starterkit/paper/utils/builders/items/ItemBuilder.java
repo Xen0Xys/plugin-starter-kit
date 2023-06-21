@@ -16,9 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Objects;
+import java.util.*;
 
 @SuppressWarnings({"UnusedReturnValue", "unused"})
 public class ItemBuilder implements Cloneable {
@@ -169,5 +167,26 @@ public class ItemBuilder implements Cloneable {
     }
     public final @NotNull ItemStack build() {
         return this.item;
+    }
+    public final @Nullable Component displayName() {
+        return this.meta().displayName();
+    }
+    public final @Nullable List<Component> lore() {
+        return this.meta().lore();
+    }
+    public final @NotNull Set<ItemFlag> flags() {
+        return this.meta().getItemFlags();
+    }
+    public final @Nullable Multimap<Attribute, AttributeModifier> modifiers() {
+        return this.meta().getAttributeModifiers();
+    }
+    public final @NotNull Collection<Namespaced> destroyableKeys() {
+        return this.meta().getDestroyableKeys();
+    }
+    public final @NotNull Collection<Namespaced> placeableKeys() {
+        return this.meta().getPlaceableKeys();
+    }
+    public final @NotNull Map<Enchantment, Integer> enchantments() {
+        return this.meta().getEnchants();
     }
 }
