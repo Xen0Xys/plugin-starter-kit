@@ -45,7 +45,7 @@ public class ItemBuilder implements Cloneable {
             throw new AssertionError();
         }
     }
-    public final @NotNull ItemBuilder apply(final @NotNull ItemMeta meta) {
+    public @NotNull ItemBuilder apply(final @NotNull ItemMeta meta) {
         this.item.setItemMeta(meta);
         return this;
     }
