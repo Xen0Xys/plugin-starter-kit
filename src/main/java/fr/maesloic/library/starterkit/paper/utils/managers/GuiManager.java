@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class GuiManager implements Listener {
     // FIELDS
     private final Map<Class<? extends GuiBuilder>, GuiBuilder> guis = new HashMap<>();
